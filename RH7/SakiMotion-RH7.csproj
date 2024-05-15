@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA95CCDC-B8BF-4E30-9531-B78AB5E3179D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProfileCut7</RootNamespace>
+    <AssemblyName>ProfileCut7</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RhinoCommon">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Rhino 7\System\RhinoCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Eto">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Rhino 7\System\Eto.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Rhino.UI">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Rhino 7\System\Rhino.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CmdProfileCutPanel.cs" />
+    <Compile Include="EditBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditBaseForm.designer.cs">
+      <DependentUpon>EditBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPath.Designer.cs">
+      <DependentUpon>EditPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPost.Designer.cs">
+      <DependentUpon>EditPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTool.Designer.cs">
+      <DependentUpon>EditTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PathSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PathSetting.Designer.cs">
+      <DependentUpon>PathSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileCommand.cs" />
+    <Compile Include="ProfileCut7Command.cs" />
+    <Compile Include="ProfileCut7PlugIn.cs" />
+    <Compile Include="ProfileCutPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProfileCutPanel.Designer.cs">
+      <DependentUpon>ProfileCutPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SKCurveOrder.cs" />
+    <Compile Include="SKGCode.cs" />
+    <Compile Include="SKOutputToolPath.cs" />
+    <Compile Include="SKRML1.cs" />
+    <Compile Include="SKUtil.cs" />
+    <Compile Include="ToolEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolEdit.Designer.cs">
+      <DependentUpon>ToolEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserStringForm.Designer.cs">
+      <DependentUpon>UserStringForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EditBaseForm.resx">
+      <DependentUpon>EditBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPath.resx">
+      <DependentUpon>EditPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPost.resx">
+      <DependentUpon>EditPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTool.resx">
+      <DependentUpon>EditTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmbeddedResources\plugin-utility.ico" />
+    <EmbeddedResource Include="PathSetting.resx">
+      <DependentUpon>PathSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileCutPanel.resx">
+      <DependentUpon>ProfileCutPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolEdit.resx">
+      <DependentUpon>ToolEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserStringForm.resx">
+      <DependentUpon>UserStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(TargetPath)" "$(TargetDir)$(ProjectName).rhp"
+Erase "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <FallbackCulture>en-US</FallbackCulture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartProgram>C:\Program Files\Rhino 7\System\Rhino.exe</StartProgram>
+    <StartArguments>
+    </StartArguments>
+    <StartAction>Program</StartAction>
+  </PropertyGroup>
+</Project>

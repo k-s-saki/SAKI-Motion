@@ -18,11 +18,15 @@ SAKI MotionのUIのパネルはタブになっています。他のRhinocerosの
 
 いろんなデータファイル形式があつかえる、マルチな3D-CADソフトです。
 
+建築物から、超精密な金型まで、デザイナーとエンジニアの間をとりもってくれる、比較的安価な3D-CADです。
+
 工業用のNURBSサーフェースと、CG業界のSUB-Dの両方の3Dデータが使えます。
 
-![image](https://github.com/k-s-saki/SAKI-Motion/assets/30764977/d4dea538-9e80-41b1-8ed0-48a5ffb72988)
 
-建築物から、超精密な金型まで、デザイナーとエンジニアの間をとりもってくれる、比較的安価な3D-CADです。
+![image](https://github.com/k-s-saki/SAKI-Motion/assets/30764977/d4dea538-9e80-41b1-8ed0-48a5ffb72988)
+© Kizuna AI　
+
+
 
 
 ### 入出力機能について

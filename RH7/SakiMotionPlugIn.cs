@@ -13,7 +13,7 @@ using Rhino.Input;
 using Rhino.Input.Custom;
 using Rhino.Geometry;
 
-namespace ProfileCut7
+namespace SakiMotion
 {
     ///<summary>
     /// <para>Every RhinoCommon .rhp assembly must have one and only one PlugIn-derived
@@ -23,24 +23,24 @@ namespace ProfileCut7
     /// attributes in AssemblyInfo.cs (you might need to click "Project" ->
     /// "Show All Files" to see it in the "Solution Explorer" window).</para>
     ///</summary>
-    public class ProfileCut7PlugIn : Rhino.PlugIns.PlugIn
+    public class SakiMotionPlugIn : Rhino.PlugIns.PlugIn
 
     {
         //Registory Base
-        static string RegBase = @"Software\ProfileCut";
+        static string RegBase = @"Software\SakiMotion";
         Microsoft.Win32.RegistryKey mRegKey;
 
         public const string TOOLPATH_LAYER = "TOOLPATH";
         public const string TOOLPATH_CALC_LAYER = "TOOLPATH_CALC";
         public const string TOOLPATH_INFO_LAYER = "TOOLPATH_INFO";
 
-        public ProfileCut7PlugIn()
+        public SakiMotionPlugIn()
         {
             Instance = this;
         }
 
         ///<summary>Gets the only instance of the ProfileCut7PlugIn plug-in.</summary>
-        public static ProfileCut7PlugIn Instance
+        public static SakiMotionPlugIn Instance
         {
             get; private set;
         }
@@ -48,7 +48,7 @@ namespace ProfileCut7
         protected override Rhino.PlugIns.LoadReturnCode OnLoad(ref string errorMessage)
         {
             System.Type panelType = typeof(ProfileCutPanel);
-            Rhino.UI.Panels.RegisterPanel(this, panelType, "ProfileCutPanel", System.Drawing.SystemIcons.Question,0);
+            Rhino.UI.Panels.RegisterPanel(this, panelType, "SakiMotionPanel", System.Drawing.SystemIcons.Question,0);
 
             return Rhino.PlugIns.LoadReturnCode.Success;
         }
@@ -234,7 +234,7 @@ namespace ProfileCut7
                 var prefix = ProfileCutCommand.Internal_Name_Prefix;
                 var prec = path.PathPrec;
                 string param = string.Format("{0} {1:0.000}", prefix, prec);
-                ProfileCut7PlugIn.RunScript("SKProfileCutConvert.py", param, true);
+                SakiMotionPlugIn.RunScript("SKProfileCutConvert.py", param, true);
             }
         }
 
@@ -268,7 +268,7 @@ namespace ProfileCut7
 
         public void DeleteDataObject()
         {
-            ProfileCut7PlugIn.RunScript("SKProfileCutDelete.py");
+            SakiMotionPlugIn.RunScript("SKProfileCutDelete.py");
         }
     }
 }

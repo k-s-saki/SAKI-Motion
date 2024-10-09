@@ -1,4 +1,4 @@
-﻿namespace ProfileCut7
+﻿namespace SakiMotion
 {
     partial class ProfileCutPanel
     {
@@ -48,10 +48,10 @@
             // 
             // BtnTool
             // 
-            this.BtnTool.Location = new System.Drawing.Point(24, 152);
-            this.BtnTool.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnTool.Location = new System.Drawing.Point(18, 122);
+            this.BtnTool.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnTool.Name = "BtnTool";
-            this.BtnTool.Size = new System.Drawing.Size(160, 32);
+            this.BtnTool.Size = new System.Drawing.Size(120, 26);
             this.BtnTool.TabIndex = 2;
             this.BtnTool.Text = "工具を設定";
             this.BtnTool.UseVisualStyleBackColor = true;
@@ -59,10 +59,10 @@
             // 
             // BtnPost
             // 
-            this.BtnPost.Location = new System.Drawing.Point(24, 116);
-            this.BtnPost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnPost.Location = new System.Drawing.Point(18, 93);
+            this.BtnPost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnPost.Name = "BtnPost";
-            this.BtnPost.Size = new System.Drawing.Size(160, 32);
+            this.BtnPost.Size = new System.Drawing.Size(120, 26);
             this.BtnPost.TabIndex = 5;
             this.BtnPost.Text = "機械の設定";
             this.BtnPost.UseVisualStyleBackColor = true;
@@ -71,27 +71,29 @@
             // LblToolName
             // 
             this.LblToolName.AutoSize = true;
-            this.LblToolName.Location = new System.Drawing.Point(191, 161);
+            this.LblToolName.Location = new System.Drawing.Point(143, 129);
+            this.LblToolName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblToolName.Name = "LblToolName";
-            this.LblToolName.Size = new System.Drawing.Size(31, 15);
+            this.LblToolName.Size = new System.Drawing.Size(23, 12);
             this.LblToolName.TabIndex = 11;
             this.LblToolName.Text = "---";
             // 
             // LblPathName
             // 
             this.LblPathName.AutoSize = true;
-            this.LblPathName.Location = new System.Drawing.Point(190, 197);
+            this.LblPathName.Location = new System.Drawing.Point(142, 158);
+            this.LblPathName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblPathName.Name = "LblPathName";
-            this.LblPathName.Size = new System.Drawing.Size(31, 15);
+            this.LblPathName.Size = new System.Drawing.Size(23, 12);
             this.LblPathName.TabIndex = 13;
             this.LblPathName.Text = "---";
             // 
             // BtnPathGen
             // 
-            this.BtnPathGen.Location = new System.Drawing.Point(24, 188);
-            this.BtnPathGen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnPathGen.Location = new System.Drawing.Point(18, 150);
+            this.BtnPathGen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnPathGen.Name = "BtnPathGen";
-            this.BtnPathGen.Size = new System.Drawing.Size(160, 32);
+            this.BtnPathGen.Size = new System.Drawing.Size(120, 26);
             this.BtnPathGen.TabIndex = 12;
             this.BtnPathGen.Text = "加工パスの設定";
             this.BtnPathGen.UseVisualStyleBackColor = true;
@@ -99,10 +101,10 @@
             // 
             // BtnProfileCut
             // 
-            this.BtnProfileCut.Location = new System.Drawing.Point(24, 274);
-            this.BtnProfileCut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnProfileCut.Location = new System.Drawing.Point(18, 219);
+            this.BtnProfileCut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnProfileCut.Name = "BtnProfileCut";
-            this.BtnProfileCut.Size = new System.Drawing.Size(160, 32);
+            this.BtnProfileCut.Size = new System.Drawing.Size(120, 26);
             this.BtnProfileCut.TabIndex = 14;
             this.BtnProfileCut.Text = "加工曲線の生成";
             this.BtnProfileCut.UseVisualStyleBackColor = true;
@@ -110,10 +112,10 @@
             // 
             // BtnDebugUserString
             // 
-            this.BtnDebugUserString.Location = new System.Drawing.Point(122, 490);
-            this.BtnDebugUserString.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnDebugUserString.Location = new System.Drawing.Point(92, 392);
+            this.BtnDebugUserString.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnDebugUserString.Name = "BtnDebugUserString";
-            this.BtnDebugUserString.Size = new System.Drawing.Size(134, 30);
+            this.BtnDebugUserString.Size = new System.Drawing.Size(100, 24);
             this.BtnDebugUserString.TabIndex = 15;
             this.BtnDebugUserString.Text = "CheckData";
             this.BtnDebugUserString.UseVisualStyleBackColor = true;
@@ -121,10 +123,10 @@
             // 
             // BtnSetOrder
             // 
-            this.BtnSetOrder.Location = new System.Drawing.Point(24, 310);
-            this.BtnSetOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnSetOrder.Location = new System.Drawing.Point(18, 248);
+            this.BtnSetOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnSetOrder.Name = "BtnSetOrder";
-            this.BtnSetOrder.Size = new System.Drawing.Size(160, 32);
+            this.BtnSetOrder.Size = new System.Drawing.Size(120, 26);
             this.BtnSetOrder.TabIndex = 16;
             this.BtnSetOrder.Text = "加工順";
             this.BtnSetOrder.UseVisualStyleBackColor = true;
@@ -133,18 +135,19 @@
             // LblPostName
             // 
             this.LblPostName.AutoSize = true;
-            this.LblPostName.Location = new System.Drawing.Point(191, 126);
+            this.LblPostName.Location = new System.Drawing.Point(143, 101);
+            this.LblPostName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblPostName.Name = "LblPostName";
-            this.LblPostName.Size = new System.Drawing.Size(31, 15);
+            this.LblPostName.Size = new System.Drawing.Size(23, 12);
             this.LblPostName.TabIndex = 17;
             this.LblPostName.Text = "---";
             // 
             // BtnOutput
             // 
-            this.BtnOutput.Location = new System.Drawing.Point(24, 347);
-            this.BtnOutput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnOutput.Location = new System.Drawing.Point(18, 278);
+            this.BtnOutput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnOutput.Name = "BtnOutput";
-            this.BtnOutput.Size = new System.Drawing.Size(160, 32);
+            this.BtnOutput.Size = new System.Drawing.Size(120, 26);
             this.BtnOutput.TabIndex = 18;
             this.BtnOutput.Text = "加工データ出力";
             this.BtnOutput.UseVisualStyleBackColor = true;
@@ -153,9 +156,10 @@
             // cbxOutputInfo
             // 
             this.cbxOutputInfo.AutoSize = true;
-            this.cbxOutputInfo.Location = new System.Drawing.Point(19, 457);
+            this.cbxOutputInfo.Location = new System.Drawing.Point(14, 366);
+            this.cbxOutputInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxOutputInfo.Name = "cbxOutputInfo";
-            this.cbxOutputInfo.Size = new System.Drawing.Size(122, 19);
+            this.cbxOutputInfo.Size = new System.Drawing.Size(99, 16);
             this.cbxOutputInfo.TabIndex = 19;
             this.cbxOutputInfo.Text = "コード分析情報";
             this.cbxOutputInfo.UseVisualStyleBackColor = true;
@@ -163,30 +167,33 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 82);
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 66);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 27);
+            this.label2.Size = new System.Drawing.Size(38, 18);
             this.label2.TabIndex = 20;
             this.label2.Text = "設定";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 243);
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(7, 194);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 27);
+            this.label3.Size = new System.Drawing.Size(38, 18);
             this.label3.TabIndex = 21;
             this.label3.Text = "操作";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 427);
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(7, 342);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 27);
+            this.label4.Size = new System.Drawing.Size(38, 18);
             this.label4.TabIndex = 22;
             this.label4.Text = "分析";
             // 
@@ -194,18 +201,19 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 27);
+            this.label5.Location = new System.Drawing.Point(14, 22);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(210, 27);
+            this.label5.Size = new System.Drawing.Size(159, 22);
             this.label5.TabIndex = 23;
-            this.label5.Text = "Profile Cut (RML1)";
+            this.label5.Text = "SAKI Motion Path";
             // 
             // BtnDelPath
             // 
-            this.BtnDelPath.Location = new System.Drawing.Point(122, 386);
-            this.BtnDelPath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnDelPath.Location = new System.Drawing.Point(92, 309);
+            this.BtnDelPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnDelPath.Name = "BtnDelPath";
-            this.BtnDelPath.Size = new System.Drawing.Size(134, 32);
+            this.BtnDelPath.Size = new System.Drawing.Size(100, 26);
             this.BtnDelPath.TabIndex = 24;
             this.BtnDelPath.Text = "計算パス消去";
             this.BtnDelPath.UseVisualStyleBackColor = true;
@@ -213,7 +221,7 @@
             // 
             // ProfileCutPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.BtnDelPath);
             this.Controls.Add(this.label5);
@@ -231,9 +239,9 @@
             this.Controls.Add(this.LblToolName);
             this.Controls.Add(this.BtnPost);
             this.Controls.Add(this.BtnTool);
-            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProfileCutPanel";
-            this.Size = new System.Drawing.Size(277, 545);
+            this.Size = new System.Drawing.Size(208, 436);
             this.ResumeLayout(false);
             this.PerformLayout();
 

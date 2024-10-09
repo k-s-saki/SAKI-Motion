@@ -14,7 +14,7 @@ using Rhino.Input.Custom;
 using Rhino.Display;
 using Rhino.Input;
 
-namespace ProfileCut7
+namespace SakiMotion
 {
     class SKCurveOrder
     {

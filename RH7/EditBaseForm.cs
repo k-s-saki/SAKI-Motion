@@ -10,7 +10,7 @@ using System.IO;
 using System.Reflection;
 using System.Collections;
 
-namespace ProfileCut7
+namespace SakiMotion
 {
     public partial class EditBaseForm : Form
     {

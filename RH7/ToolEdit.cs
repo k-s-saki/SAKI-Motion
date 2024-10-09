@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ProfileCut7
+namespace SakiMotion
 {
 
     public partial class ToolEdit : Form
@@ -79,7 +79,7 @@ namespace ProfileCut7
 
         public void ReadFromReg()
         {
-            var rk = ProfileCut7PlugIn.Instance.RegKey();
+            var rk = SakiMotionPlugIn.Instance.RegKey();
             try
             {
                 Dia = double.Parse(rk.GetValue("Dia").ToString());
@@ -96,7 +96,7 @@ namespace ProfileCut7
 
         public void SaveToReg()
         {
-            var rk = ProfileCut7PlugIn.Instance.RegKey();
+            var rk = SakiMotionPlugIn.Instance.RegKey();
             rk.SetValue("Dia", Dia.ToString());
             rk.SetValue("ZPos", ZPos.ToString());
             rk.SetValue("Feed", Feed.ToString());

@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ProfileCut7
+namespace SakiMotion
 {
     public partial class EditPath : EditBaseForm
     {

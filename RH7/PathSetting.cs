@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 
 
-namespace ProfileCut7
+namespace SakiMotion
 {
 
     public partial class PathSetting : Form

@@ -9,7 +9,7 @@ using Rhino.Input;
 using Rhino.Input.Custom;
 using Rhino.Geometry;
 
-namespace ProfileCut7
+namespace SakiMotion
 {
     class SKUtil
     {

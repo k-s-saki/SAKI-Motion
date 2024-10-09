@@ -1,4 +1,4 @@
-﻿namespace ProfileCut7
+﻿namespace SakiMotion
 {
     partial class PathSetting
     {

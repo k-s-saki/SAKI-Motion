@@ -6,11 +6,11 @@ using Rhino.Input.Custom;
 using System;
 using System.Collections.Generic;
 
-namespace ProfileCut7
+namespace SakiMotion
 {
-    public class ProfileCut7Command : Command
+    public class SakiMotionCommand : Command
     {
-        public ProfileCut7Command()
+        public SakiMotionCommand()
         {
             // Rhino only creates one instance of each command class defined in a
             // plug-in, so it is safe to store a refence in a static property.
@@ -18,7 +18,7 @@ namespace ProfileCut7
         }
 
         ///<summary>The only instance of this command.</summary>
-        public static ProfileCut7Command Instance
+        public static SakiMotionCommand Instance
         {
             get; private set;
         }
@@ -26,7 +26,7 @@ namespace ProfileCut7
         ///<returns>The command name as it appears on the Rhino command line.</returns>
         public override string EnglishName
         {
-            get { return "ProfileCut7Command"; }
+            get { return "SakiMotionCommand"; }
         }
 
         protected override Result RunCommand(RhinoDoc doc, RunMode mode)

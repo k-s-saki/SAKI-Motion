@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ProfileCut7
+namespace SakiMotion
 {
-    public partial class EditTool : ProfileCut7.EditBaseForm
+    public partial class EditTool : SakiMotion.EditBaseForm
     {
         ToolDataList DataList;
 

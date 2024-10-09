@@ -17,7 +17,7 @@ using Rhino.Input;
 
 
 
-namespace ProfileCut7
+namespace SakiMotion
 {
     public class CurveProcess
     {
@@ -34,11 +34,11 @@ namespace ProfileCut7
     public class ProfilingArcLines
     {
 
-        public ProfileCut7PlugIn PlugIn
+        public SakiMotionPlugIn PlugIn
         {
             get
             {
-                return ProfileCut7PlugIn.Instance;
+                return SakiMotionPlugIn.Instance;
             }
         }
 
@@ -236,7 +236,7 @@ namespace ProfileCut7
                     if (LayerName != "")
                     {
                         var obj = doc.Objects.Find(guid);
-                        ProfileCut7PlugIn.Instance.SetObjectLayer(obj, LayerName);
+                        SakiMotionPlugIn.Instance.SetObjectLayer(obj, LayerName);
                     }
                     ret.Add(guid);
                 }
@@ -485,7 +485,7 @@ namespace ProfileCut7
             foreach(Guid id in ObjectIDs)
             {
                 var obj = doc.Objects.Find(id);
-                ProfileCut7PlugIn.Instance.SetObjectLayer(obj, LayerName);
+                SakiMotionPlugIn.Instance.SetObjectLayer(obj, LayerName);
             }
 
         }
@@ -572,7 +572,7 @@ namespace ProfileCut7
 
                     }
                 }
-                ObjectsToLayer(doc, ToolPathCurveIDs, ProfileCut7PlugIn.TOOLPATH_CALC_LAYER);
+                ObjectsToLayer(doc, ToolPathCurveIDs, SakiMotionPlugIn.TOOLPATH_CALC_LAYER);
                 return (ToolPathCurveIDs.Count > 0);
                 // DirectCurve の場合はここで終了
             }
@@ -586,8 +586,8 @@ namespace ProfileCut7
                 return false;
             // ツールとパスの取得
             var gc = new GetProfilingDirection();
-            var Tool = ProfileCut7PlugIn.Instance.CurrentTool();
-            var Path = ProfileCut7PlugIn.Instance.CurrentPath();
+            var Tool = SakiMotionPlugIn.Instance.CurrentTool();
+            var Path = SakiMotionPlugIn.Instance.CurrentPath();
             double roffs = 0;
             if ( pm == CurveProcess.ProfileMethod.OnCurve)
             {
@@ -650,7 +650,7 @@ namespace ProfileCut7
 
                     }
 
-                    ObjectsToLayer(doc, ToolPathCurveIDs, ProfileCut7PlugIn.TOOLPATH_CALC_LAYER);
+                    ObjectsToLayer(doc, ToolPathCurveIDs, SakiMotionPlugIn.TOOLPATH_CALC_LAYER);
 
                     if (mainPolyCurves.Count > 0)
                     {
@@ -871,11 +871,11 @@ namespace ProfileCut7
 
         }
 
-        public ProfileCut7PlugIn MyPlugIn
+        public SakiMotionPlugIn MyPlugIn
         {
             get
             {
-                return ProfileCut7PlugIn.Instance;
+                return SakiMotionPlugIn.Instance;
             }
         }
 
@@ -920,7 +920,7 @@ namespace ProfileCut7
                     obj.Attributes.Name = Prefix + "_R_PATH";
                 }
                 //TPInfo
-                MyPlugIn.SetObjectLayerAndColor(obj, ProfileCut7PlugIn.TOOLPATH_CALC_LAYER, Color.Black);
+                MyPlugIn.SetObjectLayerAndColor(obj, SakiMotionPlugIn.TOOLPATH_CALC_LAYER, Color.Black);
                 SetUserString(obj, "TPInfo", string.Format("{0},{1:0}", "C", Tool.Feed));
                 obj.CommitChanges();
 
@@ -983,8 +983,8 @@ namespace ProfileCut7
             if (IsExistLead)
             {
                 //色とレイヤの設定
-                MyPlugIn.SetObjectLayerAndColor(LeadInObj, ProfileCut7PlugIn.TOOLPATH_CALC_LAYER, Color.Black);
-                MyPlugIn.SetObjectLayerAndColor(LeadOutObj, ProfileCut7PlugIn.TOOLPATH_CALC_LAYER, Color.Black);
+                MyPlugIn.SetObjectLayerAndColor(LeadInObj, SakiMotionPlugIn.TOOLPATH_CALC_LAYER, Color.Black);
+                MyPlugIn.SetObjectLayerAndColor(LeadOutObj, SakiMotionPlugIn.TOOLPATH_CALC_LAYER, Color.Black);
 
                 //カーブの順序を整列
                 List<RhinoObject> objs = new List<RhinoObject>();
@@ -1072,7 +1072,7 @@ namespace ProfileCut7
             var obj = Doc.Objects.Find(id);
             if(obj!= null)
             {
-                MyPlugIn.SetObjectLayerAndColor(obj, ProfileCut7PlugIn.TOOLPATH_INFO_LAYER, Color.Lime);
+                MyPlugIn.SetObjectLayerAndColor(obj, SakiMotionPlugIn.TOOLPATH_INFO_LAYER, Color.Lime);
             }
             return id;
         }

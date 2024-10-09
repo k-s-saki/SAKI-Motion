@@ -13,7 +13,7 @@ using Rhino.Input;
 using Rhino.Input.Custom;
 using Rhino.Geometry;
 
-namespace ProfileCut7
+namespace SakiMotion
 {
 
 
@@ -58,11 +58,11 @@ namespace ProfileCut7
 
         }
 
-        public ProfileCut7PlugIn PlugIn
+        public SakiMotionPlugIn PlugIn
         {
             get
             {
-                return ProfileCut7PlugIn.Instance;
+                return SakiMotionPlugIn.Instance;
             }
         }
 

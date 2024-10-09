@@ -1,4 +1,4 @@
-﻿namespace ProfileCut7
+﻿namespace SakiMotion
 {
   /// Every RhinoCommon plug-in can have one or more Rhino.Commands.Command
   /// inherited classes. DO NOT create instances of this class yourself. It is the
@@ -27,7 +27,7 @@
     /// </returns>
     public override string EnglishName
     {
-      get { return "ProfileCutPanel"; }
+      get { return "SakiMotionPanel"; }
     }
 
     protected override Rhino.Commands.Result RunCommand(Rhino.RhinoDoc doc, Rhino.Commands.RunMode mode)

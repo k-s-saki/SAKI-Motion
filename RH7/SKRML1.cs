@@ -12,7 +12,7 @@ using Rhino.Input.Custom;
 using Rhino.Geometry;
 
 
-namespace ProfileCut7
+namespace SakiMotion
 {
     class SKRML1
     {

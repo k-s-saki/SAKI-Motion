@@ -13,9 +13,9 @@ using Rhino.Input;
 using Rhino.Input.Custom;
 using Rhino.Geometry;
 
-using static ProfileCut7.MachineCodeConverter;
+using static SakiMotion.MachineCodeConverter;
 
-namespace ProfileCut7
+namespace SakiMotion
 {
     class SKOutputToolPath
     {

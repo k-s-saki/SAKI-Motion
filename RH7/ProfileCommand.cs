@@ -711,7 +711,7 @@ namespace SakiMotion
                     {
                         //接近曲線の決定
 
-                        LeadInIDs.AddRange(LeadInOuts.AddCurveIDs(doc,"TOOLPATH_CALC"));
+                        LeadInIDs.AddRange(LeadInOuts.AddCurveIDs(doc, SakiMotionPlugIn.TOOLPATH_CALC_LAYER));
                         //離脱曲線側を設定
                         LeadInOuts.SetCommandPrompt("離脱曲線");
                         LeadInOuts.SetParameters();
@@ -719,7 +719,7 @@ namespace SakiMotion
                     }
                     else
                     {
-                        LeadOutIDs.AddRange(LeadInOuts.AddCurveIDs(doc, "TOOLPATH_CALC"));
+                        LeadOutIDs.AddRange(LeadInOuts.AddCurveIDs(doc, SakiMotionPlugIn.TOOLPATH_CALC_LAYER));
                         return true;
                     }
                 }
@@ -1231,6 +1231,64 @@ namespace SakiMotion
             SetIDListToUserString(dup_maincurve_obj, dup_order_list, "CURVE_ORDER");
         }
 
+        private void SetUserString(RhinoObject obj, string key, string value)
+        {
+            SKUtil.SetUserString(Doc, obj, key, value);
+        }
+
+
+        // レイヤーを作成する関数
+        private int CreateLayer(RhinoDoc doc, string layerName, System.Guid? parentLayerId)
+        {
+            // レイヤーがすでに存在しているかをチェック
+            int layerIndex = doc.Layers.Find(layerName, true);
+            if (layerIndex != -1)
+            {
+                return layerIndex; // 既存のレイヤーを使用
+            }
+
+            // 新しいレイヤーを作成
+            Layer newLayer = new Layer { Name = layerName };
+            if (parentLayerId.HasValue)
+            {
+                newLayer.ParentLayerId = parentLayerId.Value; // 親レイヤーを設定
+            }
+
+            // レイヤーを追加
+            layerIndex = doc.Layers.Add(newLayer);
+            if ( layerIndex==-1)
+            {
+                RhinoApp.WriteLine("Faild Layer:"+ layerName);
+            }
+            return layerIndex;
+        }
+
+        private Result PrepareLayers()
+        {
+
+            // TOOLPATH_LAYERを作成または取得
+            int layer1Index = CreateLayer(Doc, SakiMotionPlugIn.TOOLPATH_LAYER, null);
+            if (layer1Index == -1)
+            {
+                return Result.Failure;
+            }
+
+            // TOOLPATH_CALC_LAYERをTOOLPATH_LAYERの下に作成
+            int layer2Index = CreateLayer(Doc, SakiMotionPlugIn.TOOLPATH_CALC_LAYER, Doc.Layers[layer1Index].Id);
+            if (layer2Index == -1)
+            {
+                return Result.Failure;
+            }
+
+            // TOOLPATH_INFO_LAYERをTOOLPATH_LAYERの下に作成
+            int layer3Index = CreateLayer(Doc, SakiMotionPlugIn.TOOLPATH_INFO_LAYER, Doc.Layers[layer1Index].Id);
+            if (layer3Index == -1)
+            {
+                return Result.Failure;
+            }
+
+            return Result.Success;
+        }
 
         protected ToolData Tool;
         protected PathData Path;
@@ -1238,6 +1296,12 @@ namespace SakiMotion
         protected override Result RunCommand(RhinoDoc doc, RunMode mode)
         {
             Doc = doc;
+
+            if (PrepareLayers() != Result.Success)
+            {
+                return Result.Cancel;
+            }
+
             // CAMオブジェクト
             Tool = MyPlugIn.CurrentTool();
             Path = MyPlugIn.CurrentPath();
@@ -1251,9 +1315,5 @@ namespace SakiMotion
             return Result.Cancel;
         }
 
-        private void SetUserString(RhinoObject obj, string key, string value)
-        {
-            SKUtil.SetUserString(Doc, obj, key, value);
-        }
     }
 }
